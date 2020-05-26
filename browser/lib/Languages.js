@@ -12,6 +12,10 @@ const languages = [
     locale: 'zh-TW'
   },
   {
+    name: 'Czech',
+    locale: 'cs'
+  },
+  {
     name: 'Danish',
     locale: 'da'
   },
@@ -48,8 +52,12 @@ const languages = [
     locale: 'pl'
   },
   {
-    name: 'Portuguese',
-    locale: 'pt'
+    name: 'Portuguese (PT-BR)',
+    locale: 'pt-BR'
+  },
+  {
+    name: 'Portuguese (PT-PT)',
+    locale: 'pt-PT'
   },
   {
     name: 'Russian',
@@ -58,18 +66,25 @@ const languages = [
   {
     name: 'Spanish',
     locale: 'es-ES'
+  },
+  {
+    name: 'Turkish',
+    locale: 'tr'
+  },
+  {
+    name: 'Thai',
+    locale: 'th'
   }
 ]
 
 module.exports = {
-  getLocales () {
-    return languages.reduce(function (localeList, locale) {
+  getLocales() {
+    return languages.reduce(function(localeList, locale) {
       localeList.push(locale.locale)
       return localeList
     }, [])
   },
-  getLanguages () {
+  getLanguages() {
     return languages
   }
 }
-
